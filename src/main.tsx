@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.scss'
 import { QueryClient, QueryClientProvider, useQuery, useMutation } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 const queryClient = new QueryClient()
 
-const getTodos = async () => {
+// const getTodos = async () => {
 
-  let output = true
-  return output
-}
+//   let output = true
+//   return output
+// }
 
 // const query = useQuery({
 //   queryKey: ['todos'],
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <App />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </React.StrictMode>,
 )
