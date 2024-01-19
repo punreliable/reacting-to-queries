@@ -1,4 +1,4 @@
-type TablePerson = {
+export type TypePerson = {
   firstName: string
   lastName: string
   age: number
@@ -6,5 +6,3 @@ type TablePerson = {
   status: string
   progress: number
 }
-
-export default TablePerson
